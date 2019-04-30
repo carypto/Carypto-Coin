@@ -1,0 +1,26 @@
+[Unit]
+Description=Carypto Coin's distributed currency daemon
+After=network.target
+
+[Service]
+User=caryptocoin
+Group=caryptocoin
+
+Type=forking
+PIDFile=/var/lib/caryptocoind/caryptocoind.pid
+
+ExecStart=/usr/bin/caryptocoind -daemon -pid=/var/lib/caryptocoind/caryptocoind.pid \
+          -conf=/etc/caryptocoin/caryptocoin.conf -datadir=/var/lib/caryptocoind
+
+ExecStop=-/usr/bin/caryptocoin-cli -conf=/etc/caryptocoin/caryptocoin.conf \
+         -datadir=/var/lib/caryptocoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

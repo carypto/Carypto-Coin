@@ -1,0 +1,26 @@
+# /etc/conf.d/caryptocoind: config file for /etc/init.d/caryptocoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/caryptocoin/caryptocoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/caryptocoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/caryptocoind.pid"
+
+# Where to write caryptocoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/caryptocoind"
+
+# User and group to own caryptocoind process
+#BITCOIND_USER="caryptocoin"
+#BITCOIND_GROUP="caryptocoin"
+
+# Path to caryptocoind executable
+#BITCOIND_BIN="/usr/bin/caryptocoind"
+
+# Nice value to run caryptocoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

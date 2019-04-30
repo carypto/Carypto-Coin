@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=CaryptoCoin
+Comment=CaryptoCoin P2P Cryptocurrency
+Exec=caryptocoin-qt %u
+Terminal=false
+Type=Application
+Icon=caryptocoin128
+MimeType=x-scheme-handler/caryptocoin;
+Categories=Office;Finance;
+Name[en_US]=caryptocoin-qt.desktop
