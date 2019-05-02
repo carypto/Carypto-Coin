@@ -4,9 +4,9 @@
 /* transparent-green: #e9e7ef (for inactive backgrounds)                                */
 /*                                                                                      */
 /* light-green1:      #43B043 (main green for white backgrounds)                        */
-/* light-green2:      #28346d (sligtly darker for gradients)                            */
+/* light-green2:      #29153d (sligtly darker for gradients)                            */
 /*                                                                                      */
-/* medium-green1:     #28346d (on hover)                                                */
+/* medium-green1:     #29153d (on hover)                                                */
 /* medium-green1:     #0b151e (main green for dark backgrounds)                         */
 /* medium-green2:     #004000 (sligtly darker for gradients)                            */
 /*                                                                                      */
@@ -227,7 +227,7 @@ QPushButton { /* Global Button Style */
 }
 
 QPushButton:hover {
-	background-color: #28346d;
+	background-color: #29153d;
 }
 
 QPushButton:pressed {
@@ -549,14 +549,14 @@ QSlider::groove:horizontal {
 }
 
 QSlider::sub-page:horizontal {
-	background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #28346d, stop: 1 #43B043);
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #29153d, stop: 1 #43B043);
 	border: 1px solid #333;
 	height: 10px;
 	border-radius: 4px;
 }
 
 QSlider::add-page:horizontal {
-	background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #0b151e, stop: 1 #28346d);
+	background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #0b151e, stop: 1 #29153d);
 	border: 1px solid #333;
 	height: 10px;
 	border-radius: 4px;
@@ -1098,7 +1098,7 @@ QStackedWidget#SendCoinsEntry .QToolButton:hover, /* General Settings for Pay To
 QDialog#Bip38ToolDialog .QToolButton:hover,
 QDialog#MultiSendDialog .QToolButton:hover,
 QDialog#SignVerifyMessageDialog .QToolButton:hover {
-	background-color: #28346d;
+	background-color: #29153d;
 }
 
 QStackedWidget#SendCoinsEntry .QToolButton:focus,  /* General Settings for Pay To Icons */

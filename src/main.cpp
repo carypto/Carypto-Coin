@@ -1558,9 +1558,9 @@ int64_t GetBlockValue(int nHeight)
     }
 
     if (nHeight < Params().LAST_POW_BLOCK())
-        nSubsidy = 750000 * COIN;
+        nSubsidy = 4500000 * COIN;
     else
-        nSubsidy = 4 * COIN;
+        nSubsidy = 40 * COIN;
 
     // Check if we reached the coin max supply.
     int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
@@ -1583,7 +1583,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
         return 0;
 
     // Check if we reached coin supply
-    ret = blockValue * 0.75; // 75% of block reward
+    ret = blockValue * 0.80; // 80% of block reward
 
     return ret;
 }

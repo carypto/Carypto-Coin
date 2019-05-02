@@ -53,12 +53,12 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0,      uint256("0x00000b2014e2bdecb059f94f00185041087e886adc7def3d0d1c00ca8530a03e"));
+    (0,      uint256("0x000006517672ddaa54bcce90b9a4cc4bf692eb5ad4a1ca35c0022657ced8e21f"));
 
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1556243484, // * UNIX timestamp of last checkpoint block
+    1556610806, // * UNIX timestamp of last checkpoint block
     0,     // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
@@ -98,7 +98,7 @@ public:
         pchMessageStart[2] = 0xa2;
         pchMessageStart[3] = 0xa8;
         vAlertPubKey = ParseHex("04d2df519f53e2eaa4a7d2ff3347a360520c2f4b8f07d0241a5b6ba5ce8e3d9ecba5a43696473a387adff27aa6eb72b982ff23026e088cff9f47c1b380ed52c326");
-        nDefaultPort = 8346;
+        nDefaultPort = 9153;
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         nSubsidyHalvingInterval = 1050000;
         nMaxReorganizationDepth = 100;
@@ -133,7 +133,7 @@ public:
          * nonce: 21256609
          * genesis_hash: 000009dd1b3fecf2d6b099ec44c262e74543cef502911d74f651a8bb18cd8dcc
          */
-        const char* pszTimestamp = "Carypto Core";
+        const char* pszTimestamp = "Carypto Coin";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -144,18 +144,19 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1556243484;
+        genesis.nTime = 1556610806;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 946748;
+        genesis.nNonce = 959607;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000b2014e2bdecb059f94f00185041087e886adc7def3d0d1c00ca8530a03e"));
-        assert(genesis.hashMerkleRoot == uint256("0xb42f052664cd6df582670bdf27698ec8910a57a1c45aa041bdd1ea5a092a0d12"));
+        assert(hashGenesisBlock == uint256("0x000006517672ddaa54bcce90b9a4cc4bf692eb5ad4a1ca35c0022657ced8e21f"));
+        assert(genesis.hashMerkleRoot == uint256("0xbdf799bbcb006edc19ccdbb687d4831e18d1a1bb526cde9214bd7a2c16fdee6a"));
 
         // DNS Seeding
-        vSeeds.push_back(CDNSSeedData("seed1", "167.179.93.247"));
-        vSeeds.push_back(CDNSSeedData("seed2", "207.148.97.149"));
-        vSeeds.push_back(CDNSSeedData("seed3", "207.148.93.231"));
+        vSeeds.push_back(CDNSSeedData("seed1", "207.148.95.105"));
+        vSeeds.push_back(CDNSSeedData("seed2", "202.182.107.85"));
+        vSeeds.push_back(CDNSSeedData("seed3", "45.32.57.198"));
+        vSeeds.push_back(CDNSSeedData("seed4", "45.32.61.218"));
 
         // Carypto Coin addresses start with 'Z'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 80);
@@ -212,7 +213,7 @@ public:
         pchMessageStart[2] = 0x32;
         pchMessageStart[3] = 0xbc;
         vAlertPubKey = ParseHex("04ba89975265af1d4c6295d3587eb4a0e4b758bde1621ef2ab8f92b98e7ed1c85547c9b7a3f145a66aa2abb91db5c13295828e77d823ea6d9b4bb89912425e1efe");
-        nDefaultPort = 18346;
+        nDefaultPort = 19153;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
@@ -230,7 +231,7 @@ public:
         genesis.nNonce = 188685;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0xa66497b0bdd7c182f2495f1edb944407ed7f1c02c1611a0ef411170097872846"));
+        assert(hashGenesisBlock == uint256("0x074dcfa64177968f5c5978cdd91696887b171515ec51e1a71fb9a130dcf8c1ef"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -299,8 +300,8 @@ public:
         genesis.nNonce = 20542300;
 
         hashGenesisBlock = genesis.GetHash();
-        nDefaultPort = 28346;
-        assert(hashGenesisBlock == uint256("0x9a1426d1781f1a2130f723df2210335714866bbffe0dc13bbc0dd49e58b4b2f6"));
+        nDefaultPort = 29153;
+        assert(hashGenesisBlock == uint256("0x2cb67df950f4768307350f1c53f963e9ee833b7e0bec4e8e0bb707cb7fc7ad33"));
 
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Regtest mode doesn't have any DNS seeds.
